@@ -1,6 +1,5 @@
-# Alternative hosting: GitHub Actions rebuilds static JSON every 30 minutes and publishes it with GitHub Pages.
-# Copy this file to .github/workflows/supply.yml in a repository that contains build/supply-api/, enable Pages (source: GitHub Actions),
-# and the endpoints become https://<org>.github.io/<repo>/total.json and /circulating.json (or a custom domain via CNAME).
+# Rebuilds the AUDT supply JSON every 30 minutes and publishes it with GitHub Pages.
+# Endpoints: https://<owner>.github.io/<repo>/total.json, /circulating.json, /supply.json
 name: AUDT supply
 on:
   schedule:

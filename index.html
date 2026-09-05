@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUDT Supply</title>
+<style>
+  :root { color-scheme: light dark; --bg: #f7f7f5; --fg: #1a1a1a; --muted: #5f6368; --card: #ffffff; --line: #e3e3de; --accent: #1f4e78; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #111311; --fg: #ececec; --muted: #a0a4a8; --card: #1b1e1c; --line: #2c302d; --accent: #8fbce6; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 32px 20px 60px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  h2 { font-size: 17px; margin: 32px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+  .card .label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
+  .card .value { font-size: 28px; font-weight: 600; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .card .exact { color: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; margin-top: 6px; }
+  .tablewrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; word-break: break-all; }
+  a { color: var(--accent); }
+  .muted { color: var(--muted); }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+  #status { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Auditchain (AUDT) supply</h1>
+  <p class="sub">Computed live from Ethereum, Polygon and Robinhood Chain every 30 minutes. Machine-readable: <a href="total.json">total.json</a> · <a href="circulating.json">circulating.json</a> · <a href="supply.json">supply.json</a> · <a href="config.json">config.json</a> · <a href="https://github.com/Auditchain/audt-supply">source</a></p>
+
+  <div class="cards">
+    <div class="card"><div class="label">Total supply</div><div class="value" id="total">…</div><div class="exact" id="total-exact"></div></div>
+    <div class="card"><div class="label">Circulating supply</div><div class="value" id="circ">…</div><div class="exact" id="circ-exact"></div></div>
+    <div class="card"><div class="label">Non-circulating</div><div class="value" id="noncirc">…</div><div class="exact" id="noncirc-exact"></div></div>
+  </div>
+  <p id="status"></p>
+
+  <h2>Per chain</h2>
+  <div class="tablewrap"><table id="chains">
+    <thead><tr><th>Chain</th><th>Token contract</th><th class="num">totalSupply()</th><th class="num">Held by bridge escrows</th><th class="num">Excluded wallets</th><th class="num">Contract-locked wallets</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+  <p class="muted">Total = Ethereum totalSupply − AUDT held by the bridge escrow contracts on Ethereum + Polygon totalSupply + Robinhood Chain totalSupply. Tokens sitting in a bridge escrow also exist on the destination chain, so they are counted once. Circulating = total − excluded wallets − wallets frozen by the token contracts' lockedList.</p>
+
+  <h2>Bridge escrows (removed from total)</h2>
+  <div class="tablewrap"><table id="escrows"><thead><tr><th>Chain</th><th>Address</th><th>Role</th></tr></thead><tbody></tbody></table></div>
+
+  <h2>Excluded wallets (removed from circulating)</h2>
+  <div class="tablewrap"><table id="excluded"><thead><tr><th>Chain</th><th>Address</th><th>Label</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+
+  <h2>Contract-locked wallets</h2>
+  <p id="locked" class="muted"></p>
+</main>
+<script>
+(async () => {
+  const fmt = (s, d = 2) => { const n = Number(s); return isFinite(n) ? n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }) : s; };
+  const el = (id) => document.getElementById(id);
+  const explorers = { ethereum: (a) => "https://etherscan.io/address/" + a, polygon: (a) => "https://polygonscan.com/address/" + a, robinhood: (a) => "https://robinhoodchain.blockscout.com/address/" + a };
+  const names = { ethereum: "Ethereum", polygon: "Polygon", robinhood: "Robinhood Chain" };
+  const link = (chain, a) => '<a class="mono" href="' + (explorers[chain] ? explorers[chain](a) : "#") + '" target="_blank" rel="noopener">' + a + "</a>";
+  try {
+    const [s, c] = await Promise.all([fetch("supply.json", { cache: "no-store" }).then((r) => r.json()), fetch("config.json", { cache: "no-store" }).then((r) => r.json())]);
+    el("total").textContent = fmt(s.total_supply) + " AUDT"; el("total-exact").textContent = s.total_supply;
+    el("circ").textContent = fmt(s.circulating_supply) + " AUDT"; el("circ-exact").textContent = s.circulating_supply;
+    el("noncirc").textContent = fmt(s.non_circulating) + " AUDT"; el("noncirc-exact").textContent = s.non_circulating;
+    el("status").textContent = "Last computed " + new Date(s.computed_at).toUTCString() + ".";
+    const tb = el("chains").querySelector("tbody");
+    for (const [k, v] of Object.entries(s.chains)) {
+      const token = c.chains[k] ? c.chains[k].token : "";
+      tb.insertAdjacentHTML("beforeend", "<tr><td>" + (names[k] || k) + "</td><td>" + link(k, token) + '</td><td class="num">' + fmt(v.totalSupply) + '</td><td class="num">' + fmt(v.bridgeEscrowed) + '</td><td class="num">' + fmt(v.excludedWallets) + '</td><td class="num">' + fmt(v.contractLockedWallets) + "</td></tr>");
+    }
+    const eb = el("escrows").querySelector("tbody"), xb = el("excluded").querySelector("tbody"); const lockedParts = [];
+    for (const [k, ch] of Object.entries(c.chains)) {
+      for (const e of ch.escrows || []) eb.insertAdjacentHTML("beforeend", "<tr><td>" + (names[k] || k) + "</td><td>" + link(k, e.address) + "</td><td>" + e.label + "</td></tr>");
+      for (const w of ch.excluded || []) xb.insertAdjacentHTML("beforeend", "<tr><td>" + (names[k] || k) + "</td><td>" + link(k, w.address) + "</td><td>" + w.label + '</td><td><span class="pill">' + (w.enabled === false ? "listed, not excluded" : "excluded") + "</span></td></tr>");
+      if ((ch.locked || []).length) lockedParts.push((names[k] || k) + ": " + ch.locked.length + " addresses frozen by the token contract");
+    }
+    el("locked").textContent = lockedParts.join(" · ") + ". The full lists are in config.json.";
+  } catch (e) { el("status").textContent = "Could not load supply.json: " + e; }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "audt-supply",
+  "version": "1.0.0",
+  "description": "Live total and circulating supply of Auditchain (AUDT) across Ethereum, Polygon and Robinhood Chain, published for CoinGecko",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "config": "node make-config.mjs",
+    "build": "node local-run.mjs --out site",
+    "print": "node local-run.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}

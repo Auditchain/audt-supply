@@ -1,0 +1,307 @@
+{
+  "addedEvents": 31,
+  "removedEvents": 10,
+  "uniqueAddressesEverLocked": 31,
+  "currentlyLocked": 21,
+  "currentlyLockedWithBalance": 19,
+  "lockedBalanceTotal": "638163.497901974402125166",
+  "totalSupply": "62815642.089566675923506251",
+  "lockedPctOfSupply": 1.01,
+  "eventVsStateMismatches": [],
+  "lockTxs": 41,
+  "locked": [
+    {
+      "address": "0xa03f03170cd2f86239ea9fc57a0276573c2a708d",
+      "balance": "361400.198421179833323649"
+    },
+    {
+      "address": "0xa150de28f835b0daaa0bee7ab7053381a93ec03b",
+      "balance": "199970.03110335836618008"
+    },
+    {
+      "address": "0xb9d071115661eec11f6cdfeb55df469bebd2c6f3",
+      "balance": "50000.0"
+    },
+    {
+      "address": "0xba5a06625cfc05ad748f8a11bb71a159ce641da5",
+      "balance": "7532.375863308256197842"
+    },
+    {
+      "address": "0x5ff37bfda7568152ef761bb0446125c073794f60",
+      "balance": "5250.0"
+    },
+    {
+      "address": "0x8a9fd607a9060f39ddb701a419c50b9dc89e171f",
+      "balance": "3933.605933806208184169"
+    },
+    {
+      "address": "0xaa2b7d20c0ffcb1bc17ce1b9807aa25093d114d2",
+      "balance": "2157.475709910559831177"
+    },
+    {
+      "address": "0x32e0d11138582f955f6c3bf6736c62d3daaf7b6e",
+      "balance": "1983.044197326555859137"
+    },
+    {
+      "address": "0xa85f90ee5efe76fd005a806c271dec25ea78835c",
+      "balance": "1374.202601441642678172"
+    },
+    {
+      "address": "0x6c8cfb26c544257185ae125ad819d276c3ca043c",
+      "balance": "1049.524745"
+    },
+    {
+      "address": "0x868255d70a046207bfe85b4650b932c69a10eda3",
+      "balance": "923.945992954040102572"
+    },
+    {
+      "address": "0xd7ee348f35733b7ed04d0cbe006c96a0c56dc09d",
+      "balance": "840.0"
+    },
+    {
+      "address": "0x13ba1add740e4f19dea8f7068f7e4861637c70d1",
+      "balance": "500.0"
+    },
+    {
+      "address": "0xc59ce5cd3986dc6570c3f38f4ad5ae6fcd447c9e",
+      "balance": "500.0"
+    },
+    {
+      "address": "0x75359fcd3b430284e5d5e24bdc23526c6dede9a7",
+      "balance": "340.997797068970461444"
+    },
+    {
+      "address": "0xe69ff0c7190128cd2c971f5f8e315f1dcadc9da7",
+      "balance": "230.808044762750641344"
+    },
+    {
+      "address": "0x7f131c0ac917d3378323357bd9a570fb7c250ee6",
+      "balance": "165.593960488410129692"
+    },
+    {
+      "address": "0xcb6254e2a40bad765b0dbd399ff062734f83beca",
+      "balance": "8.333333333333333334"
+    },
+    {
+      "address": "0x89745a8d324d0f1618866cea5d7e08586fcc431b",
+      "balance": "3.360198035475202554"
+    },
+    {
+      "address": "0xef006d266395826652a11c71826ea9dbf780b7e8",
+      "balance": "0.0"
+    },
+    {
+      "address": "0xd5087a4564d723942a525a1812bc2dedaef1c0f8",
+      "balance": "0.0"
+    }
+  ],
+  "addEvents": [
+    {
+      "block": 22364051,
+      "addr": "0x3511288c7cc429c1aff20efa9d0431fae65cc74c",
+      "tx": "0x57bb565cb8bda5a3d40919319416e954fc42a1fe34bb8e01629d5d1e8c236992"
+    },
+    {
+      "block": 23326474,
+      "addr": "0x32e0d11138582f955f6c3bf6736c62d3daaf7b6e",
+      "tx": "0x4dd76de05f8164d65698f9c415d5acca11e149e7fe034e87c5a9c04a472baf66"
+    },
+    {
+      "block": 25241888,
+      "addr": "0x6284d3e8d097971c26b628e6a7780754e572c858",
+      "tx": "0x82aa399e116cc5a5439b6af22a9f9f43cf7cfc3a54fa5044baca6af5f6977418"
+    },
+    {
+      "block": 25242020,
+      "addr": "0xf7e0437458c742d41554b3caaeeb727479a1ba66",
+      "tx": "0x448770e51881cf8a668bd2d25195fbf428370bd47a240ee1b3b939ef062152c7"
+    },
+    {
+      "block": 25242051,
+      "addr": "0xb9d071115661eec11f6cdfeb55df469bebd2c6f3",
+      "tx": "0x952f904d6d7ac42d73e0540e11dd6d9a613772d72c01bb86abfb8226ade0b3ef"
+    },
+    {
+      "block": 25242101,
+      "addr": "0x29c3fa7effe40d23cd93a8c8a308c33e57b3c8c0",
+      "tx": "0x507ee6e7f10f2df2eb8dda14f97a250007edfdc061a3f81d243a006e0d06c396"
+    },
+    {
+      "block": 25242117,
+      "addr": "0xba5a06625cfc05ad748f8a11bb71a159ce641da5",
+      "tx": "0xa99d1cff37a4b08a7894ccb752aee4cbd385cd57d257ded31e66aac58a1d03a0"
+    },
+    {
+      "block": 25242126,
+      "addr": "0xf37e76f2bbde6051e738d96af15d0e70a3553f8b",
+      "tx": "0x5d229a5e496e00741b1efde6b6154bcde25f90d031cda6b9c3323017330502db"
+    },
+    {
+      "block": 25242135,
+      "addr": "0x5ff37bfda7568152ef761bb0446125c073794f60",
+      "tx": "0x11a9355d9f96fa0fa2904e353bd37b41f610d37d45ffb39d5cae4bac92abb8ef"
+    },
+    {
+      "block": 25242144,
+      "addr": "0x0208c736e84a97bf0dd1a8609f44df1c5617b53a",
+      "tx": "0x5ae973ac740086dd0bbedc12432df6f994c525fbc817e03de162baa2f13b8ab7"
+    },
+    {
+      "block": 25242149,
+      "addr": "0x71cf2754ebb73e4b85f28c180658d88609fbddde",
+      "tx": "0x39d03e05165576307d403bfdb329cd25f543675477ac749847e3e4b85bf8d270"
+    },
+    {
+      "block": 25242166,
+      "addr": "0x8a9fd607a9060f39ddb701a419c50b9dc89e171f",
+      "tx": "0xdd4aa44dd9c9a249a82fe5484ceb216bf4097814b38416bdeb2ffc1213f4699d"
+    },
+    {
+      "block": 25242172,
+      "addr": "0xaa2b7d20c0ffcb1bc17ce1b9807aa25093d114d2",
+      "tx": "0xb097b5eb4318535616bf07a1c116c16a231f37a0f9489ee0ef83b806d9dd2485"
+    },
+    {
+      "block": 25242189,
+      "addr": "0x5f161ecf7ee44b65f709c741dab178c0a3de8115",
+      "tx": "0xc249b7ecd3a98f34ff5712e8b11b845a8f627be31fa6c4912740718f31684506"
+    },
+    {
+      "block": 25242207,
+      "addr": "0xa85f90ee5efe76fd005a806c271dec25ea78835c",
+      "tx": "0xfe23fbd5c8b467e5f481d477191daf3bd52576f51562b8a063e661441a8a3834"
+    },
+    {
+      "block": 25242220,
+      "addr": "0x6c8cfb26c544257185ae125ad819d276c3ca043c",
+      "tx": "0x534696b586cc4ab3286429ece4909e874d3f3595c7c9d72655cf642fb5056662"
+    },
+    {
+      "block": 25242239,
+      "addr": "0x868255d70a046207bfe85b4650b932c69a10eda3",
+      "tx": "0x87e69fbf0852a1b1034b975fd1e20c9ac65ef30be0110f76aa22a87c60bc86b5"
+    },
+    {
+      "block": 25242247,
+      "addr": "0xd7ee348f35733b7ed04d0cbe006c96a0c56dc09d",
+      "tx": "0xe422a670fc1c3c31196d3d1a5261dbe3a53eff831f0fbd8994ba2390d6976cb4"
+    },
+    {
+      "block": 25242291,
+      "addr": "0x83d822f37d1d06a0285cc956525a6ac241e664ef",
+      "tx": "0x5a0cb84e638a058109bef2d4bda00b48f8d57c02b3244c3f5b4817064496e566"
+    },
+    {
+      "block": 25242321,
+      "addr": "0x13ba1add740e4f19dea8f7068f7e4861637c70d1",
+      "tx": "0xf26c4e4e73e2160c5e275deb73b98d5710437c8b1115a7f58adb507ae5bf1d4f"
+    },
+    {
+      "block": 25242337,
+      "addr": "0xc59ce5cd3986dc6570c3f38f4ad5ae6fcd447c9e",
+      "tx": "0x068abd6778d29ba5a6e8a58a6d2a3229818c3a3c1c48432e24995aa356cb673b"
+    },
+    {
+      "block": 25242390,
+      "addr": "0x75359fcd3b430284e5d5e24bdc23526c6dede9a7",
+      "tx": "0x5d90317ab59237f14a5cc2c8d69e2eee0c2e4cb17f0888da485b67928f7b414a"
+    },
+    {
+      "block": 25242406,
+      "addr": "0x2958c30f7c5b8c5bfbf1ac244d57cc862b779fd9",
+      "tx": "0x4b5e8c9b5a69ad4ccb3ebaf7e8ca28b3d8bd63754404a49e28ce0fde6096399d"
+    },
+    {
+      "block": 25242444,
+      "addr": "0xe69ff0c7190128cd2c971f5f8e315f1dcadc9da7",
+      "tx": "0x03d48c8de810c18c340f7f45c3049727a6907d12fdc9e3829c3a69f29705fe36"
+    },
+    {
+      "block": 25242456,
+      "addr": "0x7f131c0ac917d3378323357bd9a570fb7c250ee6",
+      "tx": "0xf18510bc6ecac1b81a6549103f13172f98e70e1ec250070232d9a5ff16e56b7a"
+    },
+    {
+      "block": 25242492,
+      "addr": "0xcb6254e2a40bad765b0dbd399ff062734f83beca",
+      "tx": "0xb86d87f751d4a3e15463a490a6e13047609c58a15c7894b2ddd2c527c54e439c"
+    },
+    {
+      "block": 25242492,
+      "addr": "0x89745a8d324d0f1618866cea5d7e08586fcc431b",
+      "tx": "0x2c332284b0008f8f07853bb04514b4e47d9d1d635df52e15614fae14eda6369e"
+    },
+    {
+      "block": 25906375,
+      "addr": "0xa150de28f835b0daaa0bee7ab7053381a93ec03b",
+      "tx": "0x851ed426e181f30254ec2db283ef33418b3713caeda6167e7944947fbbeeefcf"
+    },
+    {
+      "block": 26230062,
+      "addr": "0xef006d266395826652a11c71826ea9dbf780b7e8",
+      "tx": "0xe3ed7cf85688ced0df08f5b6f3b48e236ac24ee83f228ac0b79083ed80a5ead7"
+    },
+    {
+      "block": 26858531,
+      "addr": "0xa03f03170cd2f86239ea9fc57a0276573c2a708d",
+      "tx": "0x350c13a213ca05c66dcf8f5d1d1963b5abd51b53062d2f339f68625b975f48a1"
+    },
+    {
+      "block": 34748199,
+      "addr": "0xd5087a4564d723942a525a1812bc2dedaef1c0f8",
+      "tx": "0xebc5788cb0a390aba6c511220a844f9ce9bded20a2069aaa0c5945b8b771580a"
+    }
+  ],
+  "removeEvents": [
+    {
+      "block": 22372246,
+      "addr": "0x3511288c7cc429c1aff20efa9d0431fae65cc74c",
+      "tx": "0x6135e627322b3e021806c48a3556aed03bd0d7f457b0c96255e658038c0068c2"
+    },
+    {
+      "block": 25541018,
+      "addr": "0xf7e0437458c742d41554b3caaeeb727479a1ba66",
+      "tx": "0xfd7eaff478593b5f1458bee08311a9c8858d52834740ecf5491074da96a9d2fb"
+    },
+    {
+      "block": 25693115,
+      "addr": "0x6284d3e8d097971c26b628e6a7780754e572c858",
+      "tx": "0x297db7a47c906f27e21b0cdd198818fe19ed87cdf4aeb6dcfbffc0b6ada5f621"
+    },
+    {
+      "block": 25705513,
+      "addr": "0x5f161ecf7ee44b65f709c741dab178c0a3de8115",
+      "tx": "0x50c44ce7be2bb450b256bd0bcdebeac8ed04dcdca37bba51b1a06ccf7df1d7d3"
+    },
+    {
+      "block": 25705538,
+      "addr": "0x2958c30f7c5b8c5bfbf1ac244d57cc862b779fd9",
+      "tx": "0x38f7c28cf1d896c06e242828a573ef0b6c56b951aaba856e99947349bcb5983f"
+    },
+    {
+      "block": 26209320,
+      "addr": "0xf37e76f2bbde6051e738d96af15d0e70a3553f8b",
+      "tx": "0x7d1043af86578d8545ed50a326bbf233f23f604ee531e048ee416d18b1da7e0d"
+    },
+    {
+      "block": 27056864,
+      "addr": "0x71cf2754ebb73e4b85f28c180658d88609fbddde",
+      "tx": "0xe391846cbbc29e627b33881f27d97f17cfd1eb03d9625ad3a2edda4f95f673f0"
+    },
+    {
+      "block": 27056903,
+      "addr": "0x0208c736e84a97bf0dd1a8609f44df1c5617b53a",
+      "tx": "0xc5980a8141e81e3b8b977e784c0455c10b960fe32a115487116fa1d06e80bdcf"
+    },
+    {
+      "block": 27962385,
+      "addr": "0x83d822f37d1d06a0285cc956525a6ac241e664ef",
+      "tx": "0xdd6a87957d521906eae57d1b6ac6b68dbd116344fe5de42464df69c2ce314c55"
+    },
+    {
+      "block": 29799285,
+      "addr": "0x29c3fa7effe40d23cd93a8c8a308c33e57b3c8c0",
+      "tx": "0xb55509246fa1ee3d3567ee290f914e71012634baca67b736221b0ee80aefbe37"
+    }
+  ]
+}

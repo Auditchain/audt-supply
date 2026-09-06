@@ -1,0 +1,79 @@
+{
+  "name": "Auditchain AUDT",
+  "timestamp": "2026-09-06T18:30:00.000Z",
+  "version": { "major": 1, "minor": 1, "patch": 0 },
+  "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
+  "keywords": ["auditchain", "audt", "base", "robinhood", "superchain", "arbitrum"],
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e",
+      "name": "Auditchain",
+      "symbol": "AUDT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
+      "extensions": {
+        "baseBridgeAddress": "0x3154Cf16ccdb4C6d922629664174b904d80F2C35",
+        "opListId": "auditchain",
+        "opTokenId": "AUDT",
+        "bridgeInfo": {
+          "8453": {
+            "tokenAddress": "0xc23B529dD8B8d0B2dd993f0a74a0cC708B63770d",
+            "originBridgeAddress": "0x3154Cf16ccdb4C6d922629664174b904d80F2C35",
+            "destBridgeAddress": "0x4200000000000000000000000000000000000010"
+          },
+          "4663": {
+            "tokenAddress": "0xbf7EB6679d1c833E6a58AC9A122c993c4E691B31",
+            "originBridgeAddress": "0x85001CC4867C5e1C22dA4B79BB8852B9e2a06da0",
+            "destBridgeAddress": "0xfd9b17206278C16DdaacF6AC8f05dBf97EdCb31e"
+          }
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xc23B529dD8B8d0B2dd993f0a74a0cC708B63770d",
+      "name": "Auditchain",
+      "symbol": "AUDT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
+      "extensions": {
+        "baseBridgeAddress": "0x4200000000000000000000000000000000000010",
+        "opListId": "auditchain",
+        "opTokenId": "AUDT",
+        "bridgeInfo": {
+          "1": {
+            "tokenAddress": "0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e",
+            "originBridgeAddress": "0x4200000000000000000000000000000000000010",
+            "destBridgeAddress": "0x3154Cf16ccdb4C6d922629664174b904d80F2C35"
+          }
+        }
+      }
+    },
+    {
+      "chainId": 4663,
+      "address": "0xbf7EB6679d1c833E6a58AC9A122c993c4E691B31",
+      "name": "Auditchain",
+      "symbol": "AUDT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
+      "extensions": {
+        "bridgeInfo": {
+          "1": {
+            "tokenAddress": "0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e",
+            "originBridgeAddress": "0xfd9b17206278C16DdaacF6AC8f05dBf97EdCb31e",
+            "destBridgeAddress": "0x85001CC4867C5e1C22dA4B79BB8852B9e2a06da0"
+          }
+        }
+      }
+    },
+    {
+      "chainId": 137,
+      "address": "0x91c5A5488c0dEcde1Eacd8a4F10e0942fb925067",
+      "name": "Auditchain",
+      "symbol": "AUDT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png"
+    }
+  ]
+}

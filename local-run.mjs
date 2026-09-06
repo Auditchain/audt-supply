@@ -19,5 +19,6 @@ if (i > 0) {
   const pubCfg = JSON.parse(JSON.stringify(config)); for (const ch of Object.values(pubCfg.chains)) { ch.excluded = (ch.excluded || []).filter((w) => w.enabled !== false).map((w) => ({ address: w.address })); delete ch.rpcs; }
   writeFileSync(join(out, "config.json"), JSON.stringify(pubCfg, null, 1));
   writeFileSync(join(out, "index.html"), readFileSync(join(here, "index.html"), "utf8"));
+  writeFileSync(join(out, "audt.tokenlist.json"), readFileSync(join(here, "audt.tokenlist.json"), "utf8")); // Superbridge custom token list
   console.log("written to", out);
 }

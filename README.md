@@ -32,3 +32,14 @@ Token contracts: Ethereum `0xb90cb79b72eb10c39cbdf86e50b1c89f6a235f2e`, Polygon 
 - To change the exclusion policy (for example to treat Team & Advisors wallets as non-circulating), flip `enabled` in `make-config.mjs`, run it, commit.
 - GitHub disables scheduled workflows in repositories with no activity for 60 days; a commit or a manual "Run workflow" re-enables them.
 - Run `node local-run.mjs` locally at any time to see exactly what will be published.
+
+## Bridge token list
+
+`audt.tokenlist.json` (served at https://auditchain.github.io/audt-supply/audt.tokenlist.json) is a Uniswap-format token list with the canonical AUDT contracts on Ethereum, Base, Robinhood Chain and Polygon, including the bridge contract pairs (`extensions.bridgeInfo` and the Superchain `baseBridgeAddress` fields). Add its URL as a custom token list in bridge UIs that support them (Superbridge: Settings, Token lists).
+
+| Chain | Chain id | AUDT contract | Bridge contracts |
+|---|---|---|---|
+| Ethereum | 1 | 0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e | Base L1StandardBridge 0x3154Cf16ccdb4C6d922629664174b904d80F2C35; Robinhood L1 ERC20 Gateway 0x85001CC4867C5e1C22dA4B79BB8852B9e2a06da0 |
+| Base | 8453 | 0xc23B529dD8B8d0B2dd993f0a74a0cC708B63770d | L2StandardBridge 0x4200000000000000000000000000000000000010 |
+| Robinhood Chain | 4663 | 0xbf7EB6679d1c833E6a58AC9A122c993c4E691B31 | L2 ERC20 Gateway 0xfd9b17206278C16DdaacF6AC8f05dBf97EdCb31e |
+| Polygon | 137 | 0x91c5A5488c0dEcde1Eacd8a4F10e0942fb925067 | Polygon PoS bridge (not a Uniswap bridgeInfo pair) |

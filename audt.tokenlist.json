@@ -1,7 +1,7 @@
 {
   "name": "Auditchain AUDT",
-  "timestamp": "2026-09-06T18:30:00.000Z",
-  "version": { "major": 1, "minor": 1, "patch": 0 },
+  "timestamp": "2026-09-06T18:50:00.000Z",
+  "version": { "major": 1, "minor": 2, "patch": 0 },
   "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
   "keywords": ["auditchain", "audt", "base", "robinhood", "superchain", "arbitrum"],
   "tokens": [
@@ -13,6 +13,7 @@
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
       "extensions": {
+        "website": "https://auditchain.com",
         "baseBridgeAddress": "0x3154Cf16ccdb4C6d922629664174b904d80F2C35",
         "opListId": "auditchain",
         "opTokenId": "AUDT",
@@ -38,6 +39,7 @@
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
       "extensions": {
+        "website": "https://auditchain.com",
         "baseBridgeAddress": "0x4200000000000000000000000000000000000010",
         "opListId": "auditchain",
         "opTokenId": "AUDT",
@@ -58,6 +60,7 @@
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
       "extensions": {
+        "website": "https://auditchain.com",
         "bridgeInfo": {
           "1": {
             "tokenAddress": "0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e",
@@ -73,7 +76,10 @@
       "name": "Auditchain",
       "symbol": "AUDT",
       "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png"
+      "logoURI": "https://assets.coingecko.com/coins/images/6398/thumb/auditchain.png",
+      "extensions": {
+        "website": "https://auditchain.com"
+      }
     }
   ]
 }

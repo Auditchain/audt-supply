@@ -23,33 +23,23 @@
    "excluded": [
     {
      "address": "0x504ecea1b583ccf5f2d774e734a7dff101cb70e8",
-     "label": "company operating account",
      "enabled": true
     },
     {
      "address": "0xfcaebb15cc045b7c6e441a439897ebaf187c2e7a",
-     "label": "company market-making wallet",
      "enabled": true
     },
     {
      "address": "0x6284d3e8d097971c26b628e6a7780754e572c858",
-     "label": "company distribution wallet",
      "enabled": true
     },
     {
      "address": "0x4582db070f34672d29986ef30d91f69d727a0051",
-     "label": "team admin key",
      "enabled": true
     },
     {
      "address": "0x7330a5c2d912a75c93f5834dc911a60c7a0ec2f3",
-     "label": "company old operating account",
      "enabled": true
-    },
-    {
-     "address": "0xc9b45b3bff459e88c6d9f5c1f4f7ff54cfd144c3",
-     "label": "Miguel Calejo",
-     "enabled": false
     }
    ],
    "locked": [
@@ -518,78 +508,35 @@
    "excluded": [
     {
      "address": "0x504ecea1b583ccf5f2d774e734a7dff101cb70e8",
-     "label": "company operating account",
      "enabled": true
     },
     {
      "address": "0xfcaebb15cc045b7c6e441a439897ebaf187c2e7a",
-     "label": "company market-making wallet",
      "enabled": true
     },
     {
      "address": "0x6284d3e8d097971c26b628e6a7780754e572c858",
-     "label": "company distribution wallet",
      "enabled": true
     },
     {
      "address": "0x4582db070f34672d29986ef30d91f69d727a0051",
-     "label": "team admin key",
      "enabled": true
     },
     {
      "address": "0x7330a5c2d912a75c93f5834dc911a60c7a0ec2f3",
-     "label": "company old operating account",
      "enabled": true
     },
     {
      "address": "0x639d007431780b4dde23a9d3e33268c4181b694b",
-     "label": "PacioliClaimContract_V2 (unclaimed allocations)",
      "enabled": true
     },
     {
      "address": "0x4834b8523f48c803c71e4c72baa0aabfd79f5c82",
-     "label": "Staking contract",
      "enabled": true
     },
     {
      "address": "0xcf0562a19467693a21083dd718835635e90ed2dd",
-     "label": "MemberHelpers (staking deposits)",
      "enabled": true
-    },
-    {
-     "address": "0x8fd2657345017f29dd7f46e24c7d9cbb10e9857f",
-     "label": "Jason Meyers",
-     "enabled": false
-    },
-    {
-     "address": "0x99e9a897d142baa47223ee4cbe4c7ed6dabda2a6",
-     "label": "Jonathan Wheeler",
-     "enabled": false
-    },
-    {
-     "address": "0xaaee1469155929fb360976e7715cd42dca0ff6e9",
-     "label": "Charles Hoffman",
-     "enabled": false
-    },
-    {
-     "address": "0x2d6cea04d06a98747074d38ea2680269f1d09f25",
-     "label": "Don Leeds",
-     "enabled": false
-    },
-    {
-     "address": "0xf5e6b87561a77633b3735980a62c2d764f0f35a6",
-     "label": "Chris Jastrzebski",
-     "enabled": false
-    },
-    {
-     "address": "0x17d3c6dfd4c835eb3a492f658277d893c22d1e36",
-     "label": "Vesting 4 beneficiary (unnamed)",
-     "enabled": false
-    },
-    {
-     "address": "0x8e6e113ce64fbfba23b57a2e1b47cd4baa77b1fa",
-     "label": "Vesting 4 beneficiary (unnamed)",
-     "enabled": false
     }
    ],
    "locked": [
@@ -626,13 +573,12 @@
    "excluded": [
     {
      "address": "0xfcaebb15cc045b7c6e441a439897ebaf187c2e7a",
-     "label": "company market-making wallet",
      "enabled": true
     }
    ],
    "locked": []
   }
  },
- "generatedAt": "2026-09-05T23:09:09.712Z",
- "notes": "locked lists come from the token contracts' lockedList (data/*_locked_census.json). Regenerate after any addLock/removeLock."
+ "generatedAt": "2026-09-06T02:04:12.452Z",
+ "notes": "excluded = company-controlled accounts and protocol contracts, listed by address only; locked = addresses on the token contracts' lockedList (data/*_locked_census.json). Regenerate after any addLock/removeLock."
 }

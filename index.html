@@ -53,7 +53,7 @@
   <div class="tablewrap"><table id="escrows"><thead><tr><th>Chain</th><th>Address</th><th>Role</th></tr></thead><tbody></tbody></table></div>
 
   <h2>Excluded wallets (removed from circulating)</h2>
-  <div class="tablewrap"><table id="excluded"><thead><tr><th>Chain</th><th>Address</th><th>Label</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+  <div class="tablewrap"><table id="excluded"><thead><tr><th>Chain</th><th>Address</th><th>Status</th></tr></thead><tbody></tbody></table></div>
 
   <h2>Contract-locked wallets</h2>
   <p id="locked" class="muted"></p>
@@ -79,7 +79,7 @@
     const eb = el("escrows").querySelector("tbody"), xb = el("excluded").querySelector("tbody"); const lockedParts = [];
     for (const [k, ch] of Object.entries(c.chains)) {
       for (const e of ch.escrows || []) eb.insertAdjacentHTML("beforeend", "<tr><td>" + (names[k] || k) + "</td><td>" + link(k, e.address) + "</td><td>" + e.label + "</td></tr>");
-      for (const w of ch.excluded || []) xb.insertAdjacentHTML("beforeend", "<tr><td>" + (names[k] || k) + "</td><td>" + link(k, w.address) + "</td><td>" + w.label + '</td><td><span class="pill">' + (w.enabled === false ? "listed, not excluded" : "excluded") + "</span></td></tr>");
+      for (const w of ch.excluded || []) { if (w.enabled === false) continue; xb.insertAdjacentHTML("beforeend", "<tr><td>" + (names[k] || k) + "</td><td>" + link(k, w.address) + '</td><td><span class="pill">excluded</span></td></tr>'); }
       if ((ch.locked || []).length) lockedParts.push((names[k] || k) + ": " + ch.locked.length + " addresses frozen by the token contract");
     }
     el("locked").textContent = lockedParts.join(" · ") + ". The full lists are in config.json.";

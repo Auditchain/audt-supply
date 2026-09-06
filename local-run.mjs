@@ -16,7 +16,8 @@ if (i > 0) {
   writeFileSync(join(out, "total.json"), JSON.stringify({ result: pub.total_supply }));
   writeFileSync(join(out, "circulating.json"), JSON.stringify({ result: pub.circulating_supply }));
   writeFileSync(join(out, "supply.json"), JSON.stringify(pub, null, 2));
-  writeFileSync(join(out, "config.json"), JSON.stringify(config, null, 1));
+  const pub = JSON.parse(JSON.stringify(config)); for (const ch of Object.values(pub.chains)) { ch.excluded = (ch.excluded || []).filter((w) => w.enabled !== false).map((w) => ({ address: w.address })); delete ch.rpcs; }
+  writeFileSync(join(out, "config.json"), JSON.stringify(pub, null, 1));
   writeFileSync(join(out, "index.html"), readFileSync(join(here, "index.html"), "utf8"));
   console.log("written to", out);
 }
